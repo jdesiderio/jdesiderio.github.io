@@ -1,8 +1,49 @@
 <!DOCTYPE html>
 <html>
-<body>
+    <head>
+        <link type="text/css" rel="stylesheet" href="stylesheet-random.css"/>
+    </head>
+    <body>
+        <a onClick="window.location.reload()"> <img id="randomImage" alt="Minimal landscapes" class="center"/></a>
+        <br/>
+        <br/>
+        <br/>
+        <br/><p>Made by Janyce Desiderio</p>
+        <script>
 
-<p>Coming soon.</p>
+function getRandomImage() {
+	var images = ['https://m8fp7q.am.files.1drv.com/y4ma4sYQNh7m2RkGC7B70p3cbVAqruge9xsMpcWAhVekmlgI6_Y9ustrFZkVzG8D8WpN3-9CyLOPo0X8D1oHf3RYszpFn0XYODpGOaE0kET0k2O14JurVVfkC-ztHUS0arYkoMaKyaVLrEiOuhiaKsKeBcJ1yhJ-CIX2hQ8K3VWAyBjwgyzK0qq1nO60apODpXWS_gEihZ2N6UPHRhpnSOjSQ?width=660&height=440&cropmode=none', 
+	'https://m8fq7q.am.files.1drv.com/y4mY8gqv8a-HDPRdcfELqdafV4wv_2jxVq1udKwg4P3utyjab3g2wo7U3_2VoU0uPtvfAZQTUyhDB5c6nv4s5nLzVLnz3kRMEVq0BacVUtLnDx6ZkAU9IZ9jftDLSHTeiU6UqWPbX-reX80IcAYhxkwaYfaspaerg2_ESi8oFfMFYdIIJApZbOeLc1DAnQi8o_RhTk3PrgEAumouCs-SXPaaA?width=660&height=440&cropmode=none',
+	'https://m8fr7q.am.files.1drv.com/y4mFZIu-mUPduGhtjV0I2AHdUaJzUI206y7WOySqy94KhQb0t4M4LQcSd3r31jZz8E97ci94ZdXR2conSUN_JQ_aSruxqatQkP3Iyeim1w2680L96GmF1CDSD2BdHRSsDPASA36peQwLzFL2_wMBvQ3Xyljn1VY7s_pnsLJLOd4SpjSMxlqKxI3DK6ZBc1uHK8h7Ioy2U2iShBHP5OZJOmXEQ?width=660&height=440&cropmode=none',
+	'https://m8fk7q.am.files.1drv.com/y4mEYW1wrqtnqdHztWI1WupEA1tYSM58dd09Dodmh8LpaMs6grIpn1zX-PRGjWAd2xa4-w1Duq1iBdAI-eoRoQYgSd35TKf-zj5LuEnVq3WeAIzHbPdhNloGzDgdzOkDY6-tMd6lsyDrsw1aGCIKkMig_4foZ2HsVpL8aOAZTo_cO_q9U8pMd7q9-5DKe6TIQBGERtqws7301cZf65gOc1maA?width=660&height=440&cropmode=none',
+	'https://m8fl7q.am.files.1drv.com/y4mDXegJ_ahYl3NX5u1rWzaale0TGTjLXk2Q37ybMhme1rk0kWVJBZMj5xoyJSqTsVe1tkv8xEanHLTXjJgJIHTJV9BmggxGJbXR1Fh4knnO6HgYohI4BfGezmBBqCKnSlD9_kFDLuyY35o3RwgP5WC3rjCAfU_tFEU6HB-nezB9zuJeqZmPPSZN5rlcXMZRr01fkMVFhzcz4G-y4WAgqa9FQ?width=660&height=440&cropmode=none',
+	'https://m8fm7q.am.files.1drv.com/y4mWTfwxnYSqlKhnK4fEEql__NDkgyTpdEh4UIRgQTtH4N4f7kJyDJGezVjKvYuS1T27YVNsGnV0gVa6Ky3sUNClFmeZ3ORWHtxTt0GUPzTL7zuFFuIw-Jibim2mKgD89t87wX9mJT4qM8JugfXSxqZneqU7dXcOWYamrMaqjKT_sJc378GW3vTnqNsmd-bWjLzxDTjn7fHFDdT618p7A51pg?width=660&height=440&cropmode=none',
+	'https://m8fg7q.am.files.1drv.com/y4murUOVCGG4sGMW-V2wy1bJw6T9brT_0GFrSNfcFlIy7AKAfSCq_MxbNQFMBbWC2DRIBLWTKjmfbcZMFvx8Lrng__0IFq7KB7IkJQs-oTluULvqj5aKnuMufV_R3XQvBUg-uQAu6_VzDV3CcfWDKtz-o6hH0FawKWY6RbJylTIbwjwphhiS-QEGnkNHmHSDLmYrit2-Mb_aJPRhYSECl18hA?width=660&height=440&cropmode=none',
+	'https://m8fn7q.am.files.1drv.com/y4mBCQACi6tYtIeffVgATh7DGM0dd2h4RVz_jIoPZsL6Q0lA9uTDdos3UYq3BpkaOpnDbF_myVGy59iYYjOX2b40WQGp3tTmumom7T6szKDc1ubdh48eJUePp6XOXLI-6cLRtlsLSH_BMAmzoDSeeohV1tJDiKMgNXIWou-vJrS4LORpTj2xW33_alt0nAyI4w_T85Jru_j0c0wxXa7KHZgcQ?width=660&height=440&cropmode=none',
+	'https://pmefyg.am.files.1drv.com/y4mPcJPxdiuSEgzKJC4WIJGBJ4BFoSZCDQgYz4skPmuZNU89jZVWdu4UdK_HYFSqscbcbuPPGtJRMZLUeO1u0M3_4EcCB5Lvfv8iRZvnYTSqI66ZYMLNCoepoFr6uRtDaFUAFkKDxq_yMZSvsB1U5fpYEzQfnsqwcdkTCCD3YuLK5oEOV2nuQWliAFqZ6uwNhRDkEzfAGB-Jjt3h6du9KNFcw?width=660&height=440&cropmode=none',
+	'https://m8fh7q.am.files.1drv.com/y4mGbeKYJz54SjVLVJXIx41vzpnjm9jWVM_6vQS_xU7b-bqzzMY-1zS9B_moceIjy1Hs_08-5bxZz1QkFCApCvkOGGLMGkfFKOoNO3kf0aupaQlQaakFuRMYzUgFe31VCF0sXYoR5atgxnpc6bn9inZd4B0Wwescr2YPbA8t0UaoYiPmZPGAeay7r3PhvS4mt9-cRL2W3lqJbIEX_V58NphGA?width=660&height=440&cropmode=none',
+	'https://pmedyg.am.files.1drv.com/y4mFPdD-pGrBHJNryyJonGRUNOL6VNItV2lcvYnZTwXCDbtvekoqZWqTeRsjEqmQT6zXhxCH_cYRyRkLG6AmCUpqgHk7mERb2pp1IDUw9rQ5H6l9DGEPmGb6Z7zmIWxox8ZJY3BMXVOD6d-aTGI854OU-SoesWNUuGDdqX9b5cC9dMk_quJ_rXLXaqxSyy4W1q8l7kHe7Xcstkxql8EMfrvvg?width=660&height=440&cropmode=none',
+	'https://pmeeyg.am.files.1drv.com/y4mD1pNXybEgL0EHZfZiHPbPfQRYldd4jYxKBL10ocsEAhiKfU3i7lj0X7RSf4gtCluItgsS3XDVd5xgYmTqVrndfwmAM1cK65-pjgrVgMlnw8KKbrltPcKZGcNEP1ZEREpuVooobokVxruHI02EPqWhCAq7SIvl1eSHyoMHh9ZxkuYcNPWXmwn3xmMFrPPtgEGJd4a0hXDCkaOeVwUtTneBw?width=660&height=440&cropmode=none',
+	'https://pmebyg.am.files.1drv.com/y4maZukyQxgR98_CJORSWY1vJMPIQCdRtsVi0Q6TgA_EfAcUmkhcXAk9ba0gHF8sjcBF-dHT0CkteNu1ni2iKSFxB07f233nMOqyo6SMfMyrduB72-6zFQo9fMrzE2TBPX2mCzq2LzrxQX7i7TBDNHcneWqy-bAVzUOsuGTR_yZdyTJPg3L_c0ixtUU4gvuWdGpoct2BHupQhVwLEhptl9a1w?width=660&height=440&cropmode=none',
+	'https://pmeayg.am.files.1drv.com/y4m2te03WUf1C1lZfObyDnkW3VpjULtBGxvLP2-X7mherotF1-Yb_7MC1Tn3qsao2tz_SilNPx81t_gVZDYp-4uGCzHxSWSk52blrAWwBxy2oTELTaDGjo5decaCfMzTPg9-BaatoA3lO5-4_xNvgy_Hk-MC9phONIgvZ0Zg2Rzl08FKCdgnYSbt6VitrPNu9SmB3rypVlEdTESiWhzgls4AQ?width=660&height=440&cropmode=none',
+	'https://pmdqyg.am.files.1drv.com/y4mcnvpJIVa0yQz_oTQegLwXVEg8zq2nKh8Q0okj1-qwPSjFkf3rAKI-hVMg43_ew8XitPhioxOvQfTGLUPfyKyUupPRHJ_jfp20Voyb_QsU3XUzg-53N1nRTmYUpMvLfFEUT1QIglPUrWsZMXkYmdaPRVD8K1oaVomDmdXQ-s3e7np3953hQnrrnir_91NUtk68iDmbLNnR0iNWfTI-5Czcw?width=660&height=440&cropmode=none',
+	'https://pmegyg.am.files.1drv.com/y4mHJEkiYs3Dmf7Xe4vzeg-2gJZidCdmltgCOX7w7uDyvloXlU7hTPEHOTD5g3TXw5ep9T2DwiGwmhq5wvNNSycUyC72w2Vb_5R8-POPjeDT1Tt_h8Lfkk3gBWdHhJAQ4PEBx5Wko2PFJaL3dsv-LUKcz7lUIdSrEHS7E4xbjdI3vpQxS1_qixq-193AC-7VcHiCehRFPazUr96hygUVhEoRA?width=660&height=440&cropmode=none',
+	'https://pmecyg.am.files.1drv.com/y4mDOY1NIrozapi3ytWG4-D4KwKZhZ3q3vsIjkKfsDHhVttcK63Ff7Kcfh48wr9wdG2i0Z2mqQPw1tX_6ZbyBYzkGAE3QX4JeHD9jkYTjcQbBG2fPv3ubbYFTXMLNT4UzJrXe7DdL0HHejOmxk7T18ICzNz0mbKhA_gxkZskbzho86Wx997TwHYkdWN5Py1J7yZ76jiURoNlaIe0W-DXBsbDw?width=660&height=440&cropmode=none',
+	'https://pmd7yg.am.files.1drv.com/y4mvNmdOj5amEsNj8JcIPSBxQRn24k06ODZvLWJviWVi2hHVSTJbS5oqb_HZz3Lo4CzHsswDHqa7VajARZijRSJT7BqRFI6bM0Q5LcQa98sZ7g7JBYUhU4bEsAsRyvXlj36KIjYtAwNDqigrIEAA8a9eOUvrHJjDkycdH3DIhmLQaUfMWnwt3CQo17OKylOseySLIDDU1-spNOQRYcX6dn9_w?width=660&height=440&cropmode=none',
+	'https://o8edyg.am.files.1drv.com/y4mer5Ymrqqsup5aytolDGHziUyr8fQQ2H_w12lSArRhF6_5kUSVszSOcIbGI-f39BlHNOx6QpoGrpHXulle8eauNzn4ZJgVXJO4-9JyryetZoHRmY_rh4ZRA4u_AOXMyp-gPPGJ0GbxGs2y9rz3q_4AUSrYJvHW8MI-TpqpiY5xzKrXt6e4IVrRiNCT9Y-aPPsYcS2hlLw3xL-l6qZ9tqpcw?width=660&height=440&cropmode=none',
+	];
+	var image = images[Math.floor(Math.random()*images.length)];
+	
+	return image;
+}
 
-</body>
+function displayRandomImage() {
+	var htmlImage = document.getElementById("randomImage");
+	htmlImage.src = getRandomImage();
+}
+displayRandomImage();
+
+        </script>
+
+    </body>
 </html>
