@@ -1,17 +1,47 @@
+table.align {
+    margin-left:auto; 
+    margin-right:auto;
+    border-collapse: collapse;
+    border: none;
+  }
+
 .center {
   display: block;
   margin-left: auto;
   margin-right: auto;
-  margin-top: 10%;
-  margin-bottom: auto;
   width: 50%;
 }
+
 
 p {
 	color: #254d6b;
 	font-family: Helvetica Neue thin, Helvetica, Arial, sans-serif;
-	font-size: 15px;
+	font-size: 50px;
 	text-align: center;
 	padding-top: 0;
 	padding-bottom: 0;
+}
+
+a:link {
+	font-family: Helvetica Neue thin, Helvetica Neue, sans-serif;
+	color: #254d6b;
+	text-decoration: none;
+	font-size: 25px;
+
+}
+
+a:visited {
+	font-family: Helvetica Neue thin, Helvetica Neue, sans-serif;
+	color: #254d6b;
+	text-decoration: none;
+	font-size: 25px;
+
+}
+
+a:hover {
+	font-family: Helvetica Neue thin, Helvetica Neue, sans-serif;
+	color: #254d6b;
+	text-decoration: underline;
+	font-size: 25px;
+
 }
