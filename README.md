@@ -1,6 +1,6 @@
 # Portfolio de Janyce DESIDERIO (PROJET 12 - OPENCLASSROOMS, parcours intégrateur web)
 
-Bienvenue sur le dépôt de mon portfolio d'intégrateur web, un espace où je présente mes compétences, projets, et réalisations dans le domaine du développement web. Ce portfolio est conçu pour mettre en avant mon expertise technique, ma créativité, et ma passion pour le développement web.
+Bienvenue sur le dépôt de mon portfolio d'intégrateur web, un espace où je présente mes compétences, projets, et réalisations dans le domaine du développement web. 
 
 ## Aperçu
 
@@ -25,4 +25,4 @@ Le portfolio est le dernier projet de la formation "Intégrateur Web" d'OpenClas
 
 ## Contact
 
-Pour me contacter, veuillez me retrouver sur Github.
+Pour me contacter, retrouvez-moi sur Github.

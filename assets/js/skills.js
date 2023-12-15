@@ -1,3 +1,4 @@
+// Tableau contenant les informations sur les compétences
 const skills = [
   { class: "html", icon: "fa-brands fa-html5", text: "HTML5" },
   { class: "css", icon: "fa-brands fa-css3-alt", text: "CSS3" },
@@ -9,6 +10,7 @@ const skills = [
 
 const container = document.querySelector('.skillset');
 
+// Itère sur chaque compétence pour créer les éléments HTML correspondants
 skills.forEach(skill => {
   const skillDiv = document.createElement('div');
   const bubbleDiv = document.createElement('div');
