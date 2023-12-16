@@ -1,3 +1,4 @@
+// Fonction pour récupérer les données JSON d'une URL
 async function fetchData(url) {
   try {
     const response = await fetch(url);
@@ -13,6 +14,7 @@ async function fetchData(url) {
   }
 }
 
+// Fonction pour créer des cartes de projet
 async function createProjectCards() {
   const cardContainer = document.querySelector('.card-container');
   const jsonPath = 'projects.json';
@@ -20,6 +22,7 @@ async function createProjectCards() {
   try {
     const data = await fetchData(jsonPath);
 
+    // Parcourt chaque projet dans les données JSON
     data.forEach((project, index) => {
       const card = document.createElement('div');
       card.className = 'card';
@@ -45,6 +48,7 @@ async function createProjectCards() {
         icons.appendChild(icon);
       });
 
+      // Description et outils du projet
       const details = document.createElement('div');
       details.className = 'details';
 
@@ -59,9 +63,9 @@ async function createProjectCards() {
       tools.className = 'tools';
       tools.textContent = project.tools;
 
+      // Liens vers le code et le site du projet
       const detailsLinks = document.createElement('div');
       detailsLinks.className = 'details-links';
-      // Lien vers GitHub 
       detailsLinks.innerHTML = `<a href="${project.github}" target="_blank"><i class="fa-brands fa-github"></i> Voir le code</a>`;
       // Condition pour vérifier si project.site n'est pas null
       if (project.site) {
@@ -71,12 +75,11 @@ async function createProjectCards() {
         siteLink.innerHTML = `Voir le site <i class="fa-solid fa-eye"></i>`;
         detailsLinks.appendChild(siteLink);
       }
-
-      // Assemblage de la section des détails
       details.appendChild(tools);
       details.appendChild(descriptionList);
       details.appendChild(detailsLinks);
 
+      // Gère l'expansion et la réduction de la carte
       const expandLink = document.createElement('div');
       expandLink.className = 'expand-link';
       expandLink.textContent = 'En savoir plus';
