@@ -61,7 +61,7 @@
     "imageUrl": "assets/img/sophiebluel.webp",
     "alt": "page d'accueil du portfolio Sophie Bluel",
     "title": "Portfolio de Sophie Bluel",
-    "subtitle": "Front-end du site portfolio d'une architecte d'intérieur (Projet OpenClassooms)",
+    "subtitle": "Front-end du site portfolio d'une architecte d'intérieur (Projet OpenClassrooms)",
     "description": [
       "À partir d'un back-end et d'une API fournis :",
       "- Développement de la page de présentation des travaux de l'architecte.",
@@ -79,7 +79,7 @@
     "imageUrl": "assets/img/ninacarducci.webp",
     "alt": "page d'accueil du portfolio Nina Carducci",
     "title": "Portfolio de Nina Carducci",
-    "subtitle": "Performance, accessibilité, SEO (Projet OpenClassooms)",
+    "subtitle": "Performance, accessibilité, SEO (Projet OpenClassrooms)",
     "description": [
       "Audit Lighthouse et amélioration du site portfolio d'une photographe :",
       "- Amélioration des performances (css, images, refactorisation).",
